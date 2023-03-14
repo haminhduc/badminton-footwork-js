@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  color: greenyellow;
+}
+p {
+  font-size: 60px;
+  font-weight: 700;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 150px;
+  margin-top: 75px;
+}
+.control {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: aqua;
+  right: 900px;
+}
+.corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(192, 71, 134);
+  width: 40%;
+  height: 150px;
+}
+.start {
+  top: 500px;
+}
+.stop {
+  top: 250px;
+}
+.pop-up {
+  background-color: greenyellow;
+  color: black;
+}
