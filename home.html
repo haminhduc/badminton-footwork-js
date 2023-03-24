@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="post">
+        <label for="speed">
+          <select
+            name="speedList"
+            id="speed"
+            name="speed"
+            onselect="letRun(this.value)"
+          >
+            <option value="1500" name="1500">1500</option>
+            <option value="2000" name="2000">2000</option>
+            <option value="2500" name="2500">2500</option>
+            <option value="3000" name="3000">3000</option>
+            <option value="4000" name="4000" selected="selected">4000</option>
+          </select>
+        </label>
+      </form>
+      <a href="index.html">let's go</a>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+  
+<head>
+    <title>
+        How to get selected value in 
+        dropdown list using JavaScript?
+    </title>
+</head>
+  
+<body>
+    <h1 style="color: green">
+        GeeksforGeeks
+    </h1> 
+    <b>
+        How to get selected value in dropdown
+        list using JavaScript?
+    </b>
+    <p> Select one from the given options:
+        <select id="select1">
+            <option value="free">Free</option>
+            <option value="basic">Basic</option>
+            <option value="premium">Premium</option>
+        </select>
+    </p>
+  
+  
+    <p> The value of the option selected is: 
+        <span class="output"></span>
+    </p>
+  
+  
+    <button onclick="getOption()"> Check option </button>
+      
+    <script type="text/javascript">
+    function getOption() {
+        selectElement = document.querySelector('#select1');
+        console.log(selectElement);
+        output = selectElement.value;
+        document.querySelector('.output').textContent = output;
+    }
+    </script>
+</body>
+  
+</html> -->

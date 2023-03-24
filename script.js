@@ -1,12 +1,16 @@
 const startButton = document.querySelector("#start-button");
 const stopButton = document.querySelector("#stop-button");
 const container = document.querySelector(".container");
+// const speedSelected = document.querySelector("#speed");
+// if (speedSelected) {
+//   var speed = speedSelected.value;
+// }
 let isWorking = false;
 let n = 0;
 
 function genRandAndShow(isWorking) {
   if (isWorking === true) {
-    const random = Math.floor(Math.random() * 5 + 1);
+    const random = Math.floor(Math.random() * 6 + 1);
     // console.log(random);
     const selectedCorner = "corner-" + random;
     const turn_green = document.getElementById(selectedCorner);
@@ -23,7 +27,7 @@ function turnOff(cornerNumber) {
   turn_off.classList.remove("pop-up");
 }
 
-function letRun() {
+function letRun(speed) {
   isWorking = true;
   var id = setInterval(() => {
     var on = genRandAndShow(isWorking);
@@ -34,17 +38,23 @@ function letRun() {
       1000,
       on
     );
-  }, 3000);
+  }, speed);
   container.dataset.interval = id;
 }
 
-startButton.addEventListener("click", letRun);
+// use if to check button is not null before addEventListener when using multiple html files
 
-stopButton.addEventListener("click", () => {
-  // console.log("stop pls");
-  clearInterval(container.dataset.interval);
-  isWorking = false;
-});
+if (startButton) {
+  startButton.addEventListener("click", letRun);
+}
+
+if (stopButton) {
+  stopButton.addEventListener("click", () => {
+    // console.log("stop pls");
+    clearInterval(container.dataset.interval);
+    isWorking = false;
+  });
+}
 
 // document.addEventListener function (e) {
 //   // if (e.key == " " || e.key == "Space" || e.key == 32) {
