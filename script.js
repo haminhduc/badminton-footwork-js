@@ -27,7 +27,7 @@ function turnOff(cornerNumber) {
   turn_off.classList.remove("pop-up");
 }
 
-function letRun(speed) {
+function letRun() {
   isWorking = true;
   var id = setInterval(() => {
     var on = genRandAndShow(isWorking);
@@ -38,7 +38,7 @@ function letRun(speed) {
       1000,
       on
     );
-  }, speed);
+  }, 3000);
   container.dataset.interval = id;
 }
 
