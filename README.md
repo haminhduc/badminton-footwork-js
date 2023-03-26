@@ -10,3 +10,6 @@ khi stop isWorking == false thì interval vẫn đang chạy, nhưng vì turnOff
 isWorking == true thì spawn thêm 1 interval nữa và cả 2 đều pop up
 để clearInterval() thì phải biết id của cái interval dc spawn ra. Nhưng vì spawn interval khi click on start button nên khi click on stop button ko biết id của cái interval đã dc spawn là bao nhiêu
 nên dùng dataset để lưu id và truyền cho stop button
+
+
+DUc's question: t có 1 selection trong home page mới tạo để thay chọn tốc độ của setInterval trước khi khởi chạy app. Làm cách nào để truyền giá trị từ selection đó vào app.
