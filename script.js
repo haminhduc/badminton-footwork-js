@@ -1,12 +1,20 @@
 const startButton = document.querySelector("#start-button");
 const stopButton = document.querySelector("#stop-button");
 const container = document.querySelector(".container");
+var queryDict = {}
+location.search.substr(1).split("&").forEach(function(item) {
+    queryDict[item.split("=")[0]] = item.split("=")[1]
+})
 // const speedSelected = document.querySelector("#speed");
 // if (speedSelected) {
 //   var speed = speedSelected.value;
 // }
 let isWorking = false;
 let n = 0;
+let blinkTime = 2000
+if (queryDict.speedList){
+  blinkTime = queryDict.speedList
+}
 
 function genRandAndShow(isWorking) {
   if (isWorking === true) {
@@ -38,7 +46,7 @@ function letRun() {
       1000,
       on
     );
-  }, 3000);
+  }, blinkTime);
   container.dataset.interval = id;
 }
 

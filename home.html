@@ -8,13 +8,12 @@
   </head>
   <body>
     <div class="container">
-      <form action="post">
+      <form action="index.html" method="GET">
         <label for="speed">
           <select
             name="speedList"
             id="speed"
             name="speed"
-            onselect="letRun(this.value)"
           >
             <option value="1500" name="1500">1500</option>
             <option value="2000" name="2000">2000</option>
@@ -23,8 +22,8 @@
             <option value="4000" name="4000" selected="selected">4000</option>
           </select>
         </label>
+        <input type="submit" value="Submit" />
       </form>
-      <a href="index.html">let's go</a>
     </div>
     <script src="script.js"></script>
   </body>
