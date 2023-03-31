@@ -4,25 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="home.css" />
+    <title>Badminton Foot Training</title>
   </head>
   <body>
-    <div class="container">
+    <div class="home-container">
+      <h1>Welcome to Footwork Training</h1>
       <form action="index.html" method="GET">
         <label for="speed">
-          <select
-            name="speedList"
-            id="speed"
-            name="speed"
-          >
-            <option value="1500" name="1500">1500</option>
-            <option value="2000" name="2000">2000</option>
-            <option value="2500" name="2500">2500</option>
-            <option value="3000" name="3000">3000</option>
-            <option value="4000" name="4000" selected="selected">4000</option>
-          </select>
+          <h4>Choose your level</h4>
         </label>
-        <input type="submit" value="Submit" />
+        <select name="speedList" id="speed" name="speed">
+          <option value="4000" name="4000">Beginner</option>
+          <option value="3000" name="3000">Intermediate</option>
+          <option value="2500" name="2500">Advance</option>
+          <option value="1500" name="1500">Pro</option>
+        </select>
+        <br />
+        <input type="submit" value="Let's Go" />
       </form>
     </div>
     <script src="script.js"></script>
