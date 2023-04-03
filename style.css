@@ -5,6 +5,7 @@
 }
 body {
   background-color: black;
+  height: 100vh;
   color: greenyellow;
 }
 p {
@@ -36,6 +37,7 @@ p {
 }
 .start {
   top: 500px;
+  cursor: pointer;
 }
 .stop {
   top: 250px;
@@ -43,4 +45,13 @@ p {
 .pop-up {
   background-color: greenyellow;
   color: black;
+}
+.start:hover {
+  background-color: blueviolet;
+}
+.start:active {
+  background-color: greenyellow;
+}
+.stop:hover {
+  background-color: rgb(194, 50, 50);
 }

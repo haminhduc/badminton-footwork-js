@@ -1,12 +1,23 @@
 const startButton = document.querySelector("#start-button");
 const stopButton = document.querySelector("#stop-button");
 const container = document.querySelector(".container");
+var queryDict = {};
+location.search
+  .substr(1)
+  .split("&")
+  .forEach(function (item) {
+    queryDict[item.split("=")[0]] = item.split("=")[1];
+  });
 // const speedSelected = document.querySelector("#speed");
 // if (speedSelected) {
 //   var speed = speedSelected.value;
 // }
 let isWorking = false;
 let n = 0;
+let blinkTime = 2000;
+if (queryDict.speedList) {
+  blinkTime = queryDict.speedList;
+}
 
 function genRandAndShow(isWorking) {
   if (isWorking === true) {
@@ -28,18 +39,20 @@ function turnOff(cornerNumber) {
 }
 
 function letRun() {
-  isWorking = true;
-  var id = setInterval(() => {
-    var on = genRandAndShow(isWorking);
-    setTimeout(
-      () => {
-        turnOff(on);
-      },
-      1000,
-      on
-    );
-  }, 3000);
-  container.dataset.interval = id;
+  if (isWorking === false) {
+    isWorking = true;
+    var id = setInterval(() => {
+      var on = genRandAndShow(isWorking);
+      setTimeout(
+        () => {
+          turnOff(on);
+        },
+        1000,
+        on
+      );
+    }, blinkTime);
+    container.dataset.interval = id;
+  } else return;
 }
 
 // use if to check button is not null before addEventListener when using multiple html files
