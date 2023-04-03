@@ -42,6 +42,18 @@ p {
 .stop {
   top: 250px;
 }
+.backHome {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: azure;
+  width: 150px;
+  height: 25px;
+  margin-left: -60px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 3px;
+}
 .pop-up {
   background-color: greenyellow;
   color: black;
