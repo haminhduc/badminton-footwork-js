@@ -69,11 +69,13 @@ if (stopButton) {
     isWorking = false;
   });
 }
-homeButton.addEventListener("click", () => {
-  // console.log("stop pls");
-  clearInterval(container.dataset.interval);
-  isWorking = false;
-});
+if (homeButton) {
+  homeButton.addEventListener("click", () => {
+    // console.log("stop pls");
+    clearInterval(container.dataset.interval);
+    isWorking = false;
+  });
+}
 // document.addEventListener function (e) {
 //   // if (e.key == " " || e.key == "Space" || e.key == 32) {
 //   //   if (isWorking === false) {
